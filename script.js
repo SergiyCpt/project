@@ -41,7 +41,7 @@ const personalMovieBD = {
 
 function rememberMyFIlms(){
   for(let i = 0; i < 2; i++){
-    const a = prompt("Один из последних просмотренных фильмов?",""),
+    const a = prompt("Один из последних просмотренных фильмов?","").trim(),
        b = prompt("На сколько оцените его?","");
        if(a===''|| a === null || a.length > 50 || b===''|| b === null){
         alert("Повторите попытку!")
@@ -56,7 +56,7 @@ function rememberMyFIlms(){
 
 function writeYourGenres(){
   for(let i = 0; i <= 2; i++){
-    personalMovieBD.genres[i] = prompt(`Назвите ваш любимый жанр под номером ${i + 1}`, "")
+    personalMovieBD.genres[i] = prompt(`Назвите ваш любимый жанр под номером ${i + 1}`, "").trim();
   }
 }
 writeYourGenres();

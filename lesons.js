@@ -37,11 +37,40 @@
 // findMaxNumber(1, 5, '6', '10');  =>  0
 
 
-function findMaxNumber(numOne, numTwo, numThree, numFour) {
-  if(typeof(numOne) !== 'number' || typeof(numTwo) !== 'number' || typeof(numThree) !== 'number' ||typeof(numFour) !== 'number'){
-    return 0;
-  }else{
-    return Math.max(numOne, numTwo, numThree, numFour)
+// function findMaxNumber(numOne, numTwo, numThree, numFour) {
+//   if(typeof(numOne) !== 'number' || typeof(numTwo) !== 'number' || typeof(numThree) !== 'number' ||typeof(numFour) !== 'number'){
+//     return 0;
+//   }else{
+//     return Math.max(numOne, numTwo, numThree, numFour)
+//   }
+// }
+// console.log(findMaxNumber(3, 4, 6.2, 6));
+
+
+function fib(num) {
+  if(typeof(num)!== 'number' || num <= 0 || !Number.isInteger(num)){
+    return '';
   }
+
+  let result = '';
+    let first = 0;
+    let second = 1
+
+  for (let i = 0; i < num; i++) {
+    if (i + 1 === num) {
+        result += `${first}`;
+        // Без пробела в конце
+    } else {
+        result += `${first} `;
+    }
+
+    let third = first + second;
+    first = second;
+    second = third;
+
 }
-console.log(findMaxNumber(3, 4, 6.2, 6));
+  
+
+}
+fib(7);
+
