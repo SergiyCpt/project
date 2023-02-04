@@ -1,5 +1,4 @@
 "use strict";
-
 let numberOfFilms;
 
 function start(){
@@ -20,10 +19,7 @@ function detectPersonalLevel (){
     console.log('error');
   }
 }
-
 // detectPersonalLevel();
-
-
 
 const personalMovieBD = {
   count: numberOfFilms,
@@ -51,7 +47,6 @@ function rememberMyFIlms(){
        }
   }
 }
-
 // rememberMyFIlms();
 
 function writeYourGenres(){
@@ -61,7 +56,6 @@ function writeYourGenres(){
 }
 writeYourGenres();
 
-
 function showMyBD(hiden){
   if(!hiden){
     console.log(personalMovieBD);
@@ -69,6 +63,5 @@ function showMyBD(hiden){
     console.log('Its object private')
   }
 }
-
 showMyBD(personalMovieBD.privat);
 
